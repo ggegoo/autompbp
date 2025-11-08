@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 1 * * 1" # 仅在星期一凌晨 1:00 运行
+    - cron: "0 1 */50 * *" # 每50天凌晨 1:00 运行一次
   workflow_dispatch:
     inputs:
       force_update:
